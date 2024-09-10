@@ -1,0 +1,11 @@
+version: '3'
+services:
+  node-app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - ALCHEMY_URL=${ALCHEMY_URL}
+    volumes:
+      - .:/app
+    command: node index.js
