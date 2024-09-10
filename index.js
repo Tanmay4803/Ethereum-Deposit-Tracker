@@ -110,7 +110,7 @@ async function monitorDeposits() {
             } else {
                 console.log('No new deposits found');
             }
-        }, 60000); // Check every minute
+        }, 30000); // Check every 30 seconds
 
     } catch (error) {
         console.error('Error in monitorDeposits:', error);
