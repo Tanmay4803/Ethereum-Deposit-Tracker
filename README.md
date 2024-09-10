@@ -13,7 +13,7 @@ The Ethereum Deposit Tracker is a tool designed to monitor deposits on the Beaco
   - [Running with Docker](#running-with-docker)
 - [Usage Instructions](#usage-instructions)
 - [Examples](#examples)
-  - [Example 1](#example-1)
+  - [Example 1](#example-1:-Viewing-Deposit-Data)
   - [Example 2](#example-2)
 - [Troubleshooting](#troubleshooting)
 
@@ -154,7 +154,7 @@ This will display the JSON data of all tracked deposits, which might look like t
     "asset": "ETH",
     "category": "external",
     "timestamp": "2023-01-01T12:00:00Z"
-  },// ... more deposit entries
+  },
 ]
 ```
 ![Example of Dataset](images/deposit_data.png)
