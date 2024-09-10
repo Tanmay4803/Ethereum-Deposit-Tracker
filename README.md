@@ -125,10 +125,6 @@ Ethereum-Deposit-Tracker/
 
 ## Troubleshooting
 
-- **Connection Issues:**
-
-  Ensure that your Alchemy API key is valid and that the network specified in the `.env` file is correct. Verify that you have a stable internet connection.
-
 - **Dependency Issues:**
 
   If encountering issues with Node.js dependencies, run:
