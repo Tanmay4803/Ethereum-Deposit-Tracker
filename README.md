@@ -5,15 +5,39 @@
 The Ethereum Deposit Tracker is a tool designed to monitor deposits on the Beacon Deposit Contract and store related block data. The project utilizes Node.js and Docker for a seamless setup and deployment experience.
 
 ## Table of Contents
-
+- [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Configuration](#configuration)
 - [Usage](#usage)
   - [Running with Node.js](#running-with-nodejs)
   - [Running with Docker](#running-with-docker)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
+- [Usage Instructions](#usage-instructions)
+- [Examples](#examples)
+  - [Example 1](#example1)
+  - [Example 2](#example2)
+- [Troubleshooting](#troubleshooting)
+
+## Project Structure
+
+```
+Ethereum-Deposit-Tracker/
+├── node_modules/
+├── index.js
+├── .env
+├── deposit_data.json
+├── package.json
+├── package-lock.json
+├── Dockerfile
+├── docker-compose.yml
+└── README.md
+```
+
+- `index.js`: Main script for monitoring Ethereum deposits
+- `.env`: Environment configuration file
+- `deposit_data.json`: JSON file storing deposit data
+- `Dockerfile`: Instructions for building the Docker image
+- `docker-compose.yml`: Docker Compose configuration file
+
 
 ## Prerequisites
 
@@ -68,7 +92,6 @@ The script will run continuously, checking for new deposits every minute and sav
     ```
    This command runs the container in detached mode, uses the environment variables from your `.env` file, and mounts the `deposit_data.json` file to persist data between container restarts.
 
-![Running Successfully](images/docker_logs.png)
 
 Alternatively, you can use Docker Compose:
 
@@ -83,27 +106,6 @@ To stop the container:
 ```
 docker-compose down
 ```
-
-## Project Structure
-
-```
-Ethereum-Deposit-Tracker/
-├── node_modules/
-├── index.js
-├── .env
-├── deposit_data.json
-├── package.json
-├── package-lock.json
-├── Dockerfile
-├── docker-compose.yml
-└── README.md
-```
-
-- `index.js`: Main script for monitoring Ethereum deposits
-- `.env`: Environment configuration file
-- `deposit_data.json`: JSON file storing deposit data
-- `Dockerfile`: Instructions for building the Docker image
-- `docker-compose.yml`: Docker Compose configuration file
 
 ## Usage Instructions
 
@@ -128,16 +130,6 @@ Ethereum-Deposit-Tracker/
     - **Locally (Without Docker):**
 
       Stop the application by pressing `Ctrl+C` in the terminal where `npm start` was run.
-
-## Troubleshooting
-
-- **Dependency Issues:**
-
-  If encountering issues with Node.js dependencies, run:
-
-  ```bash
-  npm install
-  ```
 
 ## Examples
 
@@ -183,3 +175,15 @@ eth-deposit-tracker    | Using Alchemy URL: https://eth-mainnet.alchemyapi.io/v2
 eth-deposit-tracker    | Found 100 new deposits
 eth-deposit-tracker    | Deposit data successfully saved to /app/deposit_data.json
 ```
+![Running Successfully](images/docker_logs.png)
+
+## Troubleshooting
+
+- **Dependency Issues:**
+
+  If encountering issues with Node.js dependencies, run:
+
+  ```bash
+  npm install
+  ```
+
