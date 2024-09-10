@@ -13,8 +13,8 @@ The Ethereum Deposit Tracker is a tool designed to monitor deposits on the Beaco
   - [Running with Docker](#running-with-docker)
 - [Usage Instructions](#usage-instructions)
 - [Examples](#examples)
-  - [Example 1](#example1)
-  - [Example 2](#example2)
+  - [Example 1](#example-1)
+  - [Example 2](#example-2)
 - [Troubleshooting](#troubleshooting)
 
 ## Project Structure
