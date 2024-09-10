@@ -11,6 +11,7 @@ The Ethereum Deposit Tracker is a tool designed to monitor deposits on the Beaco
 - [Usage](#usage)
   - [Running with Node.js](#running-with-nodejs)
   - [Running with Docker](#running-with-docker)
+  - [Running with Frontend](#running-with-frontend)
 - [Usage Instructions](#usage-instructions)
 - [Examples](#examples)
   - [Example 1](#example-1-Viewing-Deposit-Data)
@@ -108,6 +109,26 @@ To stop the container:
 ```
 docker-compose down
 ```
+
+### Running with Frontend
+
+1. Run the following command:
+```
+  cd website
+```
+2. Run the following command:
+```
+  npm i
+```
+3. To start the Ethereum Deposit Tracker Website, run the:
+```
+  node website.js
+```
+4. Click the Start Monitoring button on the website at address (https://localhost:3000).
+
+The script will run continuously, checking for new deposits every minute and saving the data to `data.json`.
+
+![Running Successfully without Frontend](images/with_frontend.png)
 
 ## Usage Instructions
 
