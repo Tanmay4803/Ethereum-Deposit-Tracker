@@ -162,13 +162,11 @@ This will display the JSON data of all tracked deposits, which might look like t
     "asset": "ETH",
     "category": "external",
     "timestamp": "2023-01-01T12:00:00Z"
-  },
-  // ... more deposit entries
+  },// ... more deposit entries
 ]
-
+```
 ![Example of Dataset](images/deposit_data.png)
 
-```
 ### Example 2: Checking Logs
 
 When running with Docker, you can check the logs to see the application's activity:
