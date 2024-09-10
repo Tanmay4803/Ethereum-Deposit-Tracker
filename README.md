@@ -4,6 +4,8 @@
 
 The Ethereum Deposit Tracker is a tool designed to monitor deposits on the Beacon Deposit Contract and store related block data. The project utilizes Node.js and Docker for a seamless setup and deployment experience.
 
+![Website](images/with_frontend.png)
+
 ## Table of Contents
 - [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
