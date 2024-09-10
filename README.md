@@ -45,6 +45,8 @@ node index.js
 
 The script will run continuously, checking for new deposits every minute and saving the data to `deposit_data.json`.
 
+![Running Successfully without Docker](images/without_docker.png)
+
 ### Running with Docker
 
 1. **Start the Application:**
@@ -55,6 +57,8 @@ The script will run continuously, checking for new deposits every minute and sav
 
     This command will start the application in the background, and you can monitor its logs for activity.
 
+![Running Successfully](images/with_docker.png)
+
 2. **Check Logs:**
 
     To view the logs of the running Docker containers, use:
@@ -63,6 +67,8 @@ The script will run continuously, checking for new deposits every minute and sav
     docker-compose logs
     ```
    This command runs the container in detached mode, uses the environment variables from your `.env` file, and mounts the `deposit_data.json` file to persist data between container restarts.
+
+![Running Successfully](images/docker_logs.png)
 
 Alternatively, you can use Docker Compose:
 
@@ -132,3 +138,50 @@ Ethereum-Deposit-Tracker/
   ```bash
   npm install
   ```
+
+## Examples
+
+### Example 1: Viewing Deposit Data
+
+After running the application for some time, you can view the collected deposit data:
+
+```bash
+cat deposit_data.json
+```
+
+This will display the JSON data of all tracked deposits, which might look like this:
+
+```json
+[
+  {
+    "blockNum": "0xc1234",
+    "hash": "0x1234...",
+    "from": "0xabcd...",
+    "to": "0x00000000219ab540356cBB839Cbe05303d7705Fa",
+    "value": "32000000000000000000",
+    "asset": "ETH",
+    "category": "external",
+    "timestamp": "2023-01-01T12:00:00Z"
+  },
+  // ... more deposit entries
+]
+
+![Example of Dataset](images/deposit_data.png)
+
+```
+### Example 2: Checking Logs
+
+When running with Docker, you can check the logs to see the application's activity:
+
+```bash
+docker-compose logs -f
+```
+
+You might see output like this:
+
+```
+eth-deposit-tracker    | Starting to monitor deposits
+eth-deposit-tracker    | Using Alchemy URL: https://eth-mainnet.alchemyapi.io/v2/your-api-key
+eth-deposit-tracker    | Found 100 new deposits
+eth-deposit-tracker    | Deposit data successfully saved to /app/deposit_data.json
+```
