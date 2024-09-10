@@ -4,12 +4,19 @@
 
 The Ethereum Deposit Tracker is a tool designed to monitor deposits on the Beacon Deposit Contract and store related block data. The project utilizes Node.js and Docker for a seamless setup and deployment experience.
 
-## Project Structure
-
+## Project Structure and Architecture
 The project directory contains the following files and folders:
-project-folder/ │ ├── Dockerfile # Dockerfile for building the application image ├── docker-compose.yml # Docker Compose configuration for managing the application ├── .env.example # Example environment configuration file ├── index.js # Main entry point for the application ├── solution.js # Contains solution logic ├── package.json # Node.js dependencies and scripts ├── package-lock.json # Exact versions of installed dependencies └── node_modules/ 
-# Installed Node.js modules
-
+<pre>
+Ethereum-Deposit-Tracker/
+├── node_modules/
+├── index.js
+├── .env
+├── deposit_data.json
+├── package.json
+├── package-lock.json
+├── Dockerfile
+├── docker-compose.yml
+</pre>
 
 ## Setup and Installation
 
@@ -144,6 +151,8 @@ Before setting up the project, ensure you have the following installed:
   ```bash
   npm install
 
-If using Docker, ensure that the Dockerfile and docker-compose.yml are correctly configured and try rebuilding the containers with:
-docker-compose up --build
+**If using Docker, ensure that the Dockerfile and docker-compose.yml are correctly configured and try rebuilding the containers with:**
+    ```sh
+    docker-compose up --build
+    ```
 
